@@ -17,5 +17,8 @@ RUN apt-get -q update \
  && apt-get clean
 
 
+RUN printf "[local]\nlocalhost" > /etc/ansible/hosts
+
+
 # Clean rootfs from image-builder
 RUN /usr/local/sbin/builder-leave
